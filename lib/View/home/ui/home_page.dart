@@ -1,5 +1,6 @@
 import 'package:demotask/View/home/bloc/home_bloc.dart';
 import 'package:demotask/config/appColors.dart';
+import 'package:demotask/config/appImages.dart';
 import 'package:demotask/config/textStyle.dart';
 import 'package:flutter/material.dart';
 
@@ -135,14 +136,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0, bottom: 10),
                       child: Container(
+                        padding: EdgeInsets.all(2),
                         height: 70,
                         width: 70,
                         alignment: Alignment.center,
-                        decoration: BoxDecoration(
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), border: Border.all(color: Colors.grey), color: Colors.red),
+                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(100),
-                          border: Border.all(color: Colors.grey),
+                          child: Image.asset(AppImages.one),
                         ),
-                        child: const Icon(Icons.safety_divider),
                       ),
                     ),
                     Text(
